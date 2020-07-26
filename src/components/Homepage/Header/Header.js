@@ -19,9 +19,23 @@ const Header = (props) => {
       </div> */}
 
       <div className="icon-menu">
-        <span>
-          <Link to="/log-in">{Auth.isAuth() ? "log out" : "log in"}</Link>
-        </span>
+        {!Auth.isAuth() ? (
+          <span>
+            <Link to="/log-in">log in</Link>
+          </span>
+        ) : (
+          <span>
+            <Link
+              onClick={() => {
+                Auth.logout(() => {
+                  props.history.push("/");
+                });
+              }}
+            >
+              log out
+            </Link>
+          </span>
+        )}
       </div>
     </div>
   );

@@ -3,4 +3,21 @@
   padding: 1rem;
   padding-top: 4rem;
   color: #fff;
+
+  &__content {
+    input {
+      display: block;
+      width: 100%;
+    }
+    label {
+      width: 100%;
+      display: block;
+    }
+    .updated-content {
+      width: 100%;
+      background-color: $violetLight;
+      color: #fff;
+      padding: 1rem;
+    }
+  }
 }
