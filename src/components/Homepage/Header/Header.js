@@ -20,7 +20,7 @@ const Header = (props) => {
 
       <div className="icon-menu">
         <span>
-          <Link to="/log-in">log in</Link>
+          <Link to="/log-in">{Auth.isAuth() ? "log out" : "log in"}</Link>
         </span>
       </div>
     </div>
