@@ -7,22 +7,6 @@ const Experience = (props) => {
 
   return (
     <Fragment>
-      {/* <div className="Work">
-        <Container>
-          <Row>
-            <Col md={12}>
-              <h1 className="main-title">__esperienze-di-lavoro</h1>
-            </Col>
-            <Col md={12}>
-              <div className="content">
-                <span className="content__name">Guglielmo Marconi shjshjs</span>
-                <span className="content__year">2007-2012</span>
-                <span className="content__title">Diploma di cose</span>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div> */}
       <div className="Work">
         <Container>
           <Row>

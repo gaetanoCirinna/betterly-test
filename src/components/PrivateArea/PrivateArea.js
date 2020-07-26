@@ -5,13 +5,35 @@ import { Container, Row, Col } from "react-bootstrap";
 import Auth from "./../../Auth";
 
 import Header from "./../Homepage/Header/Header";
+import List from "./List/List";
+import Skill from "./Skill/Skill";
+
+import { client } from "./../../client";
 
 class PrivateArea extends Component {
   constructor(props) {
     super(props);
     this.state = {
       works: [{ title: "ciocio", year: "2929", description: "jnjnjnjnjnjnj" }],
+      list: [],
+      skills: [
+        { name: "General", listSkills: ["html", "xcss", "js"] },
+        { name: "GeneralOther", listSkills: ["html", "xcss", "js"] },
+        { name: "GeneralOther", listSkills: ["html", "xcss", "js"] },
+      ],
     };
+  }
+
+  componentDidMount() {
+    client
+      .getEntries({ content_type: "works" })
+      .then((res) => {
+        console.log(res);
+        this.setState({
+          list: [...res.items],
+        });
+      })
+      .catch(console.error);
   }
 
   submitWorks = (e) => {
@@ -28,7 +50,29 @@ class PrivateArea extends Component {
     });
   };
 
+  removeItem = (e, id) => {
+    console.log(e, id);
+    const newWorks = this.state.list.filter((filter) => {
+      if (filter.sys["id"] !== id) {
+        return filter;
+      }
+    });
+
+    this.setState({
+      list: [...newWorks],
+    });
+  };
+
+  removeSkill = (index) => {
+    const skillUpdate = this.state.skills.slice(index, 1);
+    console.log("skillprima", skillUpdate, this.state.skills);
+    this.setState({
+      skills: [...skillUpdate],
+    });
+  };
+
   render() {
+    console.log("skill dal render", this.state.skills);
     return (
       <Fragment>
         <div className="PrivateArea">
@@ -37,8 +81,6 @@ class PrivateArea extends Component {
           <h1 className="">--private-area</h1>
         </div>
         <div className="PrivateArea__content">
-          {/* <label for="name">Nome</label>
-          <input type="text" id="name" name="name" placeholder="Your name.." /> */}
           <Container>
             <Row>
               <Col md={12}>
@@ -98,6 +140,47 @@ class PrivateArea extends Component {
             </Row>
           </Container>
         </div>
+
+        <Container>
+          <Row>
+            <Col md={12}>
+              <h1>Modifica il cv</h1>
+            </Col>
+          </Row>
+
+          {/* WORKS */}
+
+          <List
+            title="WORKS"
+            click={this.removeItem}
+            list={this.state.list}
+          ></List>
+
+          {/* EDUCATIONS */}
+
+          <List
+            title="EDUCATION"
+            click={this.removeItem}
+            list={this.state.list}
+          ></List>
+
+          {/* SKILLS */}
+          <Row>
+            <Col md={12}>
+              {this.state.skills.map((skill, index) => {
+                return (
+                  <Skill
+                    click={() => {
+                      this.removeSkill(index);
+                    }}
+                    key={index}
+                    title={skill.name}
+                  ></Skill>
+                );
+              })}
+            </Col>
+          </Row>
+        </Container>
       </Fragment>
     );
   }

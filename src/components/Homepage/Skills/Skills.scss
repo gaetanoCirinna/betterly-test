@@ -1,5 +1,6 @@
 .Skills {
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
   .skill-content {
     span {
       display: block;
@@ -25,8 +26,12 @@
 
   .general-skill {
     margin-top: 1rem;
-    p {
-      font-family: $vt !important;
+    ul {
+      li {
+        width: 50%;
+        float: left;
+        font-family: $vt !important;
+      }
     }
   }
 }

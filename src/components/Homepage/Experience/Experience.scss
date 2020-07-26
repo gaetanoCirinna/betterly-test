@@ -1,9 +1,10 @@
 .Experience {
 }
 .Work {
+  margin-top: 2rem;
   .content {
     border-bottom: 1px solid $violetLight;
-    padding-bottom: 1rem;
+    padding-top: 2rem;
     span {
       display: block;
       font-family: $ubuntu;
@@ -25,9 +26,11 @@
 }
 
 .Education {
+  margin-top: 2rem;
   .content {
     border-bottom: 1px solid $violetLight;
-    padding-bottom: 1rem;
+    padding-top: 2rem;
+
     span {
       display: block;
       font-family: $ubuntu;

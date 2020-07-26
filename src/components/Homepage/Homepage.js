@@ -14,6 +14,8 @@ class Homepage extends Component {
     this.state = {
       works: [],
       educations: [],
+      skills: [],
+      contacts: [],
     };
   }
 
@@ -37,6 +39,27 @@ class Homepage extends Component {
         });
       })
       .catch(console.error);
+
+    // Skills
+    client
+      .getEntries({ content_type: "skills" })
+      .then((res) => {
+        console.log("SKILLS", res);
+        this.setState({
+          skills: [...res.items],
+        });
+      })
+      .catch(console.error);
+    // Contatti
+    client
+      .getEntries({ content_type: "contatti" })
+      .then((res) => {
+        console.log("SKILLS", res);
+        this.setState({
+          contacts: [...res.items],
+        });
+      })
+      .catch(console.error);
   }
 
   render() {
@@ -44,12 +67,12 @@ class Homepage extends Component {
       <Fragment>
         <div className="Homepage">
           <Header></Header>
-          <LargeHero></LargeHero>
+          <LargeHero contacts={this.state.contacts}></LargeHero>
           <Experience
             works={this.state.works}
             educations={this.state.educations}
           ></Experience>
-          <Skills></Skills>
+          <Skills skills={this.state.skills}></Skills>
           <Footer></Footer>
         </div>
       </Fragment>
