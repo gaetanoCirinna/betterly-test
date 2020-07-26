@@ -9,28 +9,41 @@ class Footer extends Component {
         <Container>
           <Row>
             <Col md={12}>
-              <h1 className="main-title main-title--dark Footer__title">
-                Dammi consigli pls
-              </h1>
+              <h2 className="second-title main-title--dark Footer__title">
+                Vuoi darmi consigli? Scrivimi ma non essere cattivo.
+              </h2>
             </Col>
             <Col md={12}>
               <div className="form-content">
-                <form>
+                <form
+                  action="mailto:cirinna.gaetano@gmail.com"
+                  method="POST"
+                  enctype="multipart/form-data"
+                  name="sendTips"
+                >
                   <label for="name">Nome</label>
                   <input
+                    required
                     type="text"
-                    id="name"
                     name="name"
                     placeholder="Your name.."
                   />
 
                   <label for="email">Email</label>
                   <input
-                    type="email"
-                    id="email"
+                    required
+                    type="text"
                     name="email"
                     placeholder="Your email.."
                   />
+
+                  <label for="tips">Dammi consigli</label>
+
+                  <textarea
+                    required
+                    name="tips"
+                    placeholder="Scrivi qui.."
+                  ></textarea>
 
                   <button type="submit"> Invia</button>
                 </form>
