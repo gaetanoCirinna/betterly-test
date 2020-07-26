@@ -1,0 +1,14 @@
+.main-title {
+  font-family: $vt;
+  color: $violet;
+  font-size: 1.953rem;
+
+  &--dark {
+    color: $violetDark;
+  }
+}
+.second-title {
+  font-family: $vt;
+  color: $violetDark;
+  font-size: 1.25rem;
+}

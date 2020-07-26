@@ -1,0 +1,32 @@
+.Skills {
+  margin-top: 1rem;
+  .skill-content {
+    span {
+      display: block;
+    }
+    .title {
+      float: left;
+    }
+    .perc {
+      float: right;
+    }
+    .bar-content {
+      width: 100%;
+      height: 5px;
+      border-radius: 5px;
+      background-color: #ccc;
+      overflow: hidden;
+      .bar-full {
+        background-color: $violetLight;
+        height: 5px;
+      }
+    }
+  }
+
+  .general-skill {
+    margin-top: 1rem;
+    p {
+      font-family: $vt !important;
+    }
+  }
+}

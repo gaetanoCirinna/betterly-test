@@ -1,0 +1,22 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&family=VT323&display=swap");
+
+@import "./assets/styles/global.scss";
+@import "./assets/styles/variables.scss";
+@import "./assets/styles/generic-content.scss";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+.App {
+}
+
+// Components
+@import "./components/Homepage/Homepage.scss";
+@import "./components/Homepage/Header/Header.scss";
+@import "./components/Homepage/LargeHero/LargeHero.scss";
+@import "./components/Homepage/Experience/Experience.scss";
+@import "./components/Homepage/Skills/Skills.scss";
+@import "./components/Homepage/Footer/Footer.scss";
+@import "./components/PrivateArea/PrivateArea.scss";
+@import "./components/LogIn/LogIn.scss";

@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+
+import { BrowserRouter, Route, Switch, withRouter } from "react-router-dom";
+
+import { Container, Row, Col } from "react-bootstrap";
+
+import Homepage from "./components/Homepage/Homepage.js";
+import PrivateArea from "./components/PrivateArea/PrivateArea";
+import LogIn from "./components/LogIn/LogIn.js";
+
+import PrivateRoute from "./private-route";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route exact path="/" component={Homepage}></Route>
+        <PrivateRoute
+          exact
+          path="/private-area"
+          component={PrivateArea}
+        ></PrivateRoute>
+        <Route path="/log-in" component={LogIn}></Route>
+        <Route path="*" component={() => "404"}></Route>
+      </Switch>
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);

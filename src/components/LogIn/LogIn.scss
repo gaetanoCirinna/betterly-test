@@ -1,0 +1,17 @@
+.LogIn {
+  background-color: #ccc;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  .content {
+    background-color: #fff;
+    width: 80vw;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px;
+  }
+}

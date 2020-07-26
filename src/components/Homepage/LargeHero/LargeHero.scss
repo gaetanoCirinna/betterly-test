@@ -1,0 +1,28 @@
+.LargeHero {
+  background-color: $violetLight;
+  width: 100%;
+  padding: 1rem;
+  padding-top: 4rem;
+  .title {
+    color: #fff;
+  }
+  .contacts {
+    width: 100%;
+    tbody {
+      .col-name {
+        font-weight: 700 !important;
+      }
+    }
+    th {
+      font-family: $vt;
+      color: $violetDark;
+    }
+    td {
+      color: #fff;
+      font-family: $ubuntu;
+      font-weight: 100;
+      font-size: 0.8rem;
+      padding-right: 0.8rem;
+    }
+  }
+}

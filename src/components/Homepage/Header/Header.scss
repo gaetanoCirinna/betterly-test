@@ -1,0 +1,43 @@
+.Header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  .icon-menu {
+    width: 100%;
+    display: block;
+
+    cursor: pointer;
+
+    i {
+      color: #fff;
+      float: right;
+    }
+    span {
+      color: #fff;
+      float: right;
+      font-size: 0.8rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 5px;
+      border: 1px solid #fff;
+      box-shadow: none;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      &:hover {
+        background-color: $violetDark;
+        border: none;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      }
+      &:active {
+        background-color: $violetDark;
+        border: none;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.Experience {
+}
+.Work {
+  .content {
+    border-bottom: 1px solid $violetLight;
+    padding-bottom: 1rem;
+    span {
+      display: block;
+      font-family: $ubuntu;
+    }
+    &__name {
+      color: $violetDark;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    &__year {
+      font-size: 0.8rem;
+      color: #ccc;
+    }
+    &__title {
+      font-size: 1.25rem;
+      color: $charcoal;
+    }
+  }
+}
+
+.Education {
+  .content {
+    border-bottom: 1px solid $violetLight;
+    padding-bottom: 1rem;
+    span {
+      display: block;
+      font-family: $ubuntu;
+    }
+    &__name {
+      color: $violetDark;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    &__year {
+      font-size: 0.8rem;
+      color: #ccc;
+    }
+    &__title {
+      font-size: 1.25rem;
+      color: $charcoal;
+    }
+  }
+}
