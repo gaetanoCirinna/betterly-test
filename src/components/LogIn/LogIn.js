@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { withRouter } from "react-router-dom";
 import Auth from "./../../Auth";
+import Loading from "../../assets/widget/Loading/Loading";
 
 class LogIn extends Component {
   constructor(props) {
@@ -72,16 +73,7 @@ class LogIn extends Component {
               </Row>
             </Container>
           ) : (
-            <div className="lds-roller">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
+            <Loading></Loading>
           )}
         </div>
       </div>

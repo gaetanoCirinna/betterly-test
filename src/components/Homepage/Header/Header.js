@@ -24,16 +24,14 @@ const Header = (props) => {
             <Link to="/log-in">log in</Link>
           </span>
         ) : (
-          <span>
-            <Link
-              onClick={() => {
-                Auth.logout(() => {
-                  props.history.push("/");
-                });
-              }}
-            >
-              log out
-            </Link>
+          <span
+            onClick={() => {
+              Auth.logout(() => {
+                props.history.push("/");
+              });
+            }}
+          >
+            log out
           </span>
         )}
       </div>

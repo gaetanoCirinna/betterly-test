@@ -1,6 +1,43 @@
 .Skill {
-  .content {
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  .content-skill {
+    position: relative;
     width: 100%;
     background-color: $violetLight;
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid $violetDark;
+    float: left;
+    width: 100%;
+    border-radius: 5px;
+    .name {
+      float: left;
+      color: #fff;
+      width: 100%;
+      display: block;
+      input {
+        width: 100%;
+        margin-top: 0.5rem;
+        border: none;
+        font-family: $ubuntu;
+      }
+    }
+    .icon {
+      padding: 0;
+      display: block;
+      width: 100%;
+      span {
+        float: right;
+        color: #fff;
+      }
+    }
   }
+}
+.icon-edit {
+  color: $violetDark;
+  float: right;
 }

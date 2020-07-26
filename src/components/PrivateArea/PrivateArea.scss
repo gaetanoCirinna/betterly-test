@@ -1,10 +1,15 @@
 .PrivateArea {
-  background-color: $violet;
-  padding: 1rem;
-  padding-top: 4rem;
-  color: #fff;
+  position: relative;
+  .large-hero {
+    background-color: $violet;
+    padding: 1rem;
+    padding-top: 4rem;
+    color: #fff;
+  }
 
-  &__content {
+  .content {
+    position: relative;
+    margin-top: 3rem;
     input {
       display: block;
       width: 100%;
@@ -12,12 +17,114 @@
     label {
       width: 100%;
       display: block;
+      margin-top: 1rem;
     }
-    .updated-content {
+    button {
+      font-family: $vt;
+      font-size: 1.5rem;
+      color: #fff;
+      margin-top: 1rem;
+      display: block;
+      width: 100%;
+      background-color: $violet;
+      border: none;
+      padding: 0.4rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+      &:hover {
+        background-color: $violetDark;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+          0 6px 6px rgba(0, 0, 0, 0.23);
+      }
+    }
+  }
+
+  .updated-content {
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+    font-family: $ubuntu;
+    .updated {
       width: 100%;
       background-color: $violetLight;
-      color: #fff;
       padding: 1rem;
+      border-bottom: 1px solid $violetDark;
+
+      &__element {
+        overflow: scroll;
+        color: $charcoal;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        background-color: #fff;
+        padding: 0.4rem 1rem;
+        margin-bottom: 1rem;
+        h1 {
+          font-size: 0.8rem;
+          font-family: $ubuntu !important;
+          border-bottom: 1px solid $violetDark;
+        }
+        span {
+          display: block;
+          font-size: 0.6rem;
+          margin: 0;
+          padding: 0;
+        }
+        p {
+          margin: 0;
+          padding: 0;
+          font-size: 1rem;
+        }
+      }
+      .title {
+        color: $violetDark;
+      }
+    }
+  }
+
+  .send-data {
+    margin-top: 2rem;
+    color: #fff;
+    width: 100%;
+
+    background-color: $violetLight;
+
+    &__content {
+      padding: 1rem;
+      position: relative;
+      height: auto;
+      padding-bottom: 4rem;
+      h1 {
+        color: $violetDark;
+      }
+
+      button {
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 50%;
+        padding: 0.4rem;
+        border: none;
+        color: #fff;
+        font-family: $vt;
+        background-color: $violet;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+        &:hover {
+          background-color: $violetDark;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+            0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+      }
+    }
+  }
+
+  .mod-cv {
+    margin-top: 3rem;
+    .main-title {
+      border-bottom: 1px solid $violetDark;
     }
   }
 }

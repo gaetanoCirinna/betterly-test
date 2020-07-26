@@ -1,3 +1,7 @@
+.List {
+  position: relative;
+  width: 100%;
+}
 .content {
   position: relative;
   width: 100%;
@@ -17,8 +21,18 @@
   .list {
     float: left;
     width: 100%;
+    padding-right: 2.125rem;
     span {
       display: block;
+    }
+    &__name {
+      font-size: 1.125rem;
+    }
+    &__year {
+      font-size: 0.6rem;
+    }
+    &__description {
+      font-size: 0.8rem;
     }
   }
   .icon {
