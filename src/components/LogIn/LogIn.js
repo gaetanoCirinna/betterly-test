@@ -38,6 +38,9 @@ class LogIn extends Component {
             <Container>
               <Row>
                 <Col md={12}>
+                  <h1 className="main-title">__log-in</h1>
+                </Col>
+                <Col md={12}>
                   <div className="form-content">
                     <form
                       onSubmit={(event) => {
@@ -62,16 +65,7 @@ class LogIn extends Component {
                         placeholder="Your password.."
                       />
 
-                      <button type="submit">SUBMIOT</button>
-                      <button
-                        onClick={() => {
-                          Auth.login(() => {
-                            this.props.history.push("/private-area");
-                          });
-                        }}
-                      >
-                        Invia
-                      </button>
+                      <button type="submit">SUBMIT</button>
                     </form>
                   </div>
                 </Col>
