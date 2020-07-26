@@ -117,7 +117,7 @@ class PrivateArea extends Component {
         educations: [],
         loading: false,
       });
-    }, 2500);
+    }, Math.floor(Math.random() * 3000));
   };
 
   removeItemWorks = (e, id) => {
@@ -189,6 +189,7 @@ class PrivateArea extends Component {
                   >
                     <label for="name">Nome</label>
                     <input
+                      required
                       type="text"
                       name="nameAgency"
                       placeholder="Inserisci nome agenzia"
@@ -198,6 +199,7 @@ class PrivateArea extends Component {
                     />
                     <label for="name">Nome</label>
                     <input
+                      required
                       type="text"
                       name="year"
                       placeholder="Durata esperienza"
@@ -208,6 +210,7 @@ class PrivateArea extends Component {
 
                     <label for="name">Nome</label>
                     <input
+                      required
                       type="text"
                       name="description"
                       placeholder="Descrizione lavoro"
@@ -258,6 +261,7 @@ class PrivateArea extends Component {
                   >
                     <label for="name">Nome</label>
                     <input
+                      required
                       type="text"
                       name="nameSchool"
                       placeholder="Inserisci nome scuola"
@@ -267,6 +271,7 @@ class PrivateArea extends Component {
                     />
                     <label for="name">Nome</label>
                     <input
+                      required
                       type="text"
                       name="year"
                       placeholder="Durata esperienza"
@@ -277,6 +282,7 @@ class PrivateArea extends Component {
 
                     <label for="name">Nome</label>
                     <input
+                      required
                       type="text"
                       name="description"
                       placeholder="Descrizione"
@@ -329,6 +335,7 @@ class PrivateArea extends Component {
                   >
                     <label for="name">Nome</label>
                     <input
+                      required
                       type="text"
                       name="devTool"
                       placeholder="Inserisci dev tool"
@@ -399,23 +406,35 @@ class PrivateArea extends Component {
                 <h1 className="main-title">Modifica le informazioni nel CV</h1>
               </Col>
 
-              <List
-                list={this.state.worksStore}
-                title="Works"
-                click={this.removeItemWorks}
-              ></List>
+              {this.state.worksStore.length > 0 ? (
+                <List
+                  list={this.state.worksStore}
+                  title="Works"
+                  click={this.removeItemWorks}
+                ></List>
+              ) : (
+                <Loading></Loading>
+              )}
 
-              <List
-                list={this.state.educationsStore}
-                title="Educations"
-                click={this.removeItemEducations}
-              ></List>
+              {this.state.educationsStore.length > 0 ? (
+                <List
+                  list={this.state.educationsStore}
+                  title="Educations"
+                  click={this.removeItemEducations}
+                ></List>
+              ) : (
+                <Loading></Loading>
+              )}
 
-              <Skill
-                title="Skills"
-                skills={this.state.skillsStore}
-                click={this.removeItemSkills}
-              ></Skill>
+              {this.state.skillsStore.length > 0 ? (
+                <Skill
+                  title="Skills"
+                  skills={this.state.skillsStore}
+                  click={this.removeItemSkills}
+                ></Skill>
+              ) : (
+                <Loading></Loading>
+              )}
             </Row>
           </Container>
         </div>

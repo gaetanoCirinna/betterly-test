@@ -27,7 +27,7 @@ class LogIn extends Component {
         Auth.login(() => {
           this.props.history.push("/private-area");
         });
-      }, 800);
+      }, Math.floor(Math.random() * 3000));
     } else {
     }
   };

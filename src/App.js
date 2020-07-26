@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/" component={PrivateArea}></Route>
+        <Route exact path="/" component={Homepage}></Route>
         <PrivateRoute
           exact
           path="/private-area"
