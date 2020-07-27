@@ -10,7 +10,7 @@ class Footer extends Component {
           <Row>
             <Col md={12}>
               <h2 className="second-title main-title--dark Footer__title">
-                Vuoi darmi consigli? Scrivimi ma non essere cattivo.
+                Contattami!
               </h2>
             </Col>
             <Col md={12}>
@@ -18,10 +18,10 @@ class Footer extends Component {
                 <form
                   action="mailto:cirinna.gaetano@gmail.com"
                   method="POST"
-                  enctype="multipart/form-data"
+                  encType="multipart/form-data"
                   name="sendTips"
                 >
-                  <label for="name">Nome</label>
+                  <label htmlFor="name">Nome</label>
                   <input
                     required
                     type="text"
@@ -29,7 +29,7 @@ class Footer extends Component {
                     placeholder="Your name.."
                   />
 
-                  <label for="email">Email</label>
+                  <label htmlFor="email">Email</label>
                   <input
                     required
                     type="text"
@@ -37,7 +37,7 @@ class Footer extends Component {
                     placeholder="Your email.."
                   />
 
-                  <label for="tips">Dammi consigli</label>
+                  <label htmlFor="tips">Mandami offerte</label>
 
                   <textarea
                     required

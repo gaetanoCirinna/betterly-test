@@ -3,8 +3,6 @@ import React, { Component, Fragment } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 const Experience = (props) => {
-  console.log("PROPS", Object.keys(props.works).length);
-
   return (
     <Fragment>
       <div className="Work">

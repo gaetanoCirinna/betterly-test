@@ -44,7 +44,6 @@ class Homepage extends Component {
     client
       .getEntries({ content_type: "skills" })
       .then((res) => {
-        console.log("SKILLS", res);
         this.setState({
           skills: [...res.items],
         });
@@ -54,7 +53,6 @@ class Homepage extends Component {
     client
       .getEntries({ content_type: "contatti" })
       .then((res) => {
-        console.log("SKILLS", res);
         this.setState({
           contacts: [...res.items],
         });

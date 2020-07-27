@@ -30,7 +30,7 @@ class Skill extends Component {
           <Row>
             {this.props.skills.map((element, index) => {
               return (
-                <Col md={4} key={index}>
+                <Col md={4} key={"skills" + index}>
                   <div className="content-skill">
                     <div className="icon">
                       <span

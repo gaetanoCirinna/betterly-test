@@ -63,12 +63,10 @@ class PrivateArea extends Component {
             return skillsArray;
           }),
         ];
-        console.log("KMKMKMKMKMK", skillsFilter);
 
         this.setState({
           skillsStore: [...skillsFilter[0]],
         });
-        console.log("state", this.state.skillsStore);
       })
       .catch(console.error);
   }
@@ -121,7 +119,6 @@ class PrivateArea extends Component {
   };
 
   removeItemWorks = (e, id) => {
-    console.log(e, id);
     const newWorks = this.state.worksStore.filter((filter) => {
       if (filter.sys["id"] !== id) {
         return filter;
@@ -133,7 +130,6 @@ class PrivateArea extends Component {
     });
   };
   removeItemEducations = (e, id) => {
-    console.log(e, id);
     const newEducations = this.state.educationsStore.filter((filter) => {
       if (filter.sys["id"] !== id) {
         return filter;
@@ -147,13 +143,10 @@ class PrivateArea extends Component {
   removeItemSkills = (e, index) => {
     const newSkills = this.state.skillsStore.filter((filter, i) => {
       if (index !== i) {
-        console.log("ENTROOO");
         return filter;
       }
     });
-    console.log("vecchio", this.state.skillsStore, "nuovo", newSkills);
 
-    console.log(index);
     this.setState({
       skillsStore: [...newSkills],
     });
@@ -161,14 +154,12 @@ class PrivateArea extends Component {
 
   removeSkill = (index) => {
     const skillUpdate = this.state.skills.slice(index, 1);
-    console.log("skillprima", skillUpdate, this.state.skills);
     this.setState({
       skills: [...skillUpdate],
     });
   };
 
   render() {
-    console.log("skill dal render", this.state.skills);
     return (
       <div className="PrivateArea">
         <Header></Header>
@@ -193,9 +184,7 @@ class PrivateArea extends Component {
                       type="text"
                       name="nameAgency"
                       placeholder="Inserisci nome agenzia"
-                      onChange={(event) => {
-                        console.log(event.target.value);
-                      }}
+                      onChange={(event) => {}}
                     />
                     <label for="name">Nome</label>
                     <input
@@ -203,9 +192,7 @@ class PrivateArea extends Component {
                       type="text"
                       name="year"
                       placeholder="Durata esperienza"
-                      onChange={(event) => {
-                        console.log(event.target.value);
-                      }}
+                      onChange={(event) => {}}
                     />
 
                     <label for="name">Nome</label>
@@ -214,9 +201,7 @@ class PrivateArea extends Component {
                       type="text"
                       name="description"
                       placeholder="Descrizione lavoro"
-                      onChange={(event) => {
-                        console.log(event.target.value);
-                      }}
+                      onChange={(event) => {}}
                     />
 
                     <button type="submit">AGGIUNGI</button>
@@ -265,9 +250,7 @@ class PrivateArea extends Component {
                       type="text"
                       name="nameSchool"
                       placeholder="Inserisci nome scuola"
-                      onChange={(event) => {
-                        console.log(event.target.value);
-                      }}
+                      onChange={(event) => {}}
                     />
                     <label for="name">Nome</label>
                     <input
@@ -275,9 +258,7 @@ class PrivateArea extends Component {
                       type="text"
                       name="year"
                       placeholder="Durata esperienza"
-                      onChange={(event) => {
-                        console.log(event.target.value);
-                      }}
+                      onChange={(event) => {}}
                     />
 
                     <label for="name">Nome</label>
@@ -286,9 +267,7 @@ class PrivateArea extends Component {
                       type="text"
                       name="description"
                       placeholder="Descrizione"
-                      onChange={(event) => {
-                        console.log(event.target.value);
-                      }}
+                      onChange={(event) => {}}
                     />
 
                     <button type="submit">AGGIUNGI</button>
@@ -339,9 +318,7 @@ class PrivateArea extends Component {
                       type="text"
                       name="devTool"
                       placeholder="Inserisci dev tool"
-                      onChange={(event) => {
-                        console.log(event.target.value);
-                      }}
+                      onChange={(event) => {}}
                     />
                     <button type="submit">AGGIUNGI</button>
                   </form>

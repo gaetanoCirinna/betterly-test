@@ -15,23 +15,25 @@ const LargeHero = (props) => {
               {props.contacts.map((ele) => {
                 return ele.fields.contacts.contacts.map((contact) => {
                   return (
-                    <tbody>
-                      <tr>
-                        <th>Contatti</th>
-                      </tr>
-                      <tr>
-                        <td className="col-name">DDN:</td>
-                        <td>{contact.ddn}</td>
-                      </tr>
-                      <tr>
-                        <td className="col-name">EMAIL:</td>
-                        <td>{contact.email}</td>
-                      </tr>
-                      <tr>
-                        <td className="col-name">INDIRIZZO:</td>
-                        <td>{contact.indirizzo}</td>
-                      </tr>
-                    </tbody>
+                    <Fragment>
+                      <tbody>
+                        <tr>
+                          <th>Contatti</th>
+                        </tr>
+                        <tr>
+                          <td className="col-name">DDN:</td>
+                          <td>{contact.ddn}</td>
+                        </tr>
+                        <tr>
+                          <td className="col-name">EMAIL:</td>
+                          <td>{contact.email}</td>
+                        </tr>
+                        <tr>
+                          <td className="col-name">INDIRIZZO:</td>
+                          <td>{contact.indirizzo}</td>
+                        </tr>
+                      </tbody>
+                    </Fragment>
                   );
                 });
               })}
